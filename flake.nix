@@ -9,6 +9,7 @@
     self,
     nixpkgs,
   }: let
+    config = {allowUnfree = true;};
     systems = ["x86_64-linux"];
     forEachSystem = function:
       nixpkgs.lib.genAttrs systems (system:
@@ -16,6 +17,7 @@
           inherit system;
           pkgs = import nixpkgs {
             inherit system;
+            inherit config;
           };
         });
   in {
@@ -23,6 +25,7 @@
       default = pkgs.mkShell {
         buildInputs = with pkgs; [
           nodejs_22
+          mongodb
           openssl
         ];
 

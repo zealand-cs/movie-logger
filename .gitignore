@@ -1,6 +1,12 @@
+# Node
+**/node_modules
+
+# Secrets and configs
 **/*.env
 !**/*.env.example
 
-**/node_modules
+# Data
+**/data
 
+# IDE
 .direnv
