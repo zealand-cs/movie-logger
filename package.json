@@ -1,0 +1,23 @@
+{
+  "name": "movie-logger",
+  "version": "0.1.0",
+  "description": "A simple webapp to log which movies you've seen and getting better recommendations",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+	"dev": "nodemon server.js",
+    "test": "vitest --reporter=verbose",
+	"test:watch": "vitest --watch",
+	"test:cov": "vitest --coverage"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+	"dotenv": "^17.2.0"
+  },
+  "devDependencies": {
+	"nodemon": "^3.1.10",
+	"vitest": "^4.0.8",
+	"supertest": "^7.1.4"
+  }
+}
